@@ -14,28 +14,20 @@
         <h1><center>NotePen</center></h1>
 
         <h2>New Note</h2>
-        <div id="content">
-            <section class="sidebar"> 
-              <div id="menubar">
-                <nav class="menu">
-                  <h3><a href="list.html">Wall</a></h3>
-                  <hr>
-                </nav>
-                <nav class="menu">
-                  <h3>Edit Notes</h3>
-                  <hr>
-                </nav>
-              </div>
-            </section>
-        </div>
+        
         <div style="display: inline-block">
             <p><samp>fill</samp></p>
         </div>
+        
         <div style="display: inline-block">
             <center><input type=text name="Title" value="Title (optional)" id="title"></center><br>
             <center><textarea name="Note" cols="45" rows="5" id="note" draggable="false"></textarea></center><br>
-            <input type="Submit" value="Save" id="save">
+            <input type="Submit" value="Save" id="save" onclick="saveNote(note.text, , )">
         </div>
-        
+        <script>
+            function saveNote(text, name, type) {
+                
+            }
+        </script>
     </body>
 </html>
