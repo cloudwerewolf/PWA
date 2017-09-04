@@ -3,11 +3,14 @@
     
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>NotePen</title>
-        <meta name="description" content="NotePen">
         <link rel="stylesheet" href="main.css">
         <link href='https://fonts.googleapis.com/css?family=Scope One' rel='stylesheet'>
+        <script>
+            function saveNote(text, name, type) {
+                
+            }
+        </script>
     </head>
     <body>
         
@@ -15,19 +18,19 @@
 
         <h2>New Note</h2>
         
-        <div style="display: inline-block">
-            <p><samp>fill</samp></p>
+        <div class="inputForm">   
+            <input type="text" value="Title (optional)" id="title"><br><br>
+            <textarea cols="45" rows="5" id="note" draggable="false"></textarea><br>
+            <div>
+                <input type="Submit" value="Save" id="save" onclick="saveNote(, , )">
+            </div>
         </div>
-        
-        <div style="display: inline-block">
-            <center><input type=text name="Title" value="Title (optional)" id="title"></center><br>
-            <center><textarea name="Note" cols="45" rows="5" id="note" draggable="false"></textarea></center><br>
-            <input type="Submit" value="Save" id="save" onclick="saveNote(note.text, , )">
-        </div>
-        <script>
-            function saveNote(text, name, type) {
-                
-            }
-        </script>
+        <br><hr><br>
+        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
+        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
+        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
+        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
+        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
+        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
     </body>
 </html>
