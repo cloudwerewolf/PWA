@@ -111,6 +111,7 @@ img {
 #notelist{
     display: inline-grid;
     border-color: white;
-/*    border-width: 10px;*/
+    border-width: 8px;
     box-sizing: border-box;
+    outline-color: rgba(234, 227, 199, 0.65);
 }

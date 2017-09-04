@@ -5,27 +5,20 @@
         <title>NotePen</title>
         <link rel="stylesheet" href="main.css">
         <link href='https://fonts.googleapis.com/css?family=Scope One' rel='stylesheet'>
-        <script>
-            function saveNote(text, name, type) {
-                
-            }
-        </script>
+        <script type="text/javascript"src="note.js"></script>
     </head>
     <body>
-        <h1>NotePen</h1>
+        <h1 style="text-align:center">NotePen</h1>
         <h2>New Note</h2>
         
         <div class="inputForm">   
             <input type="text" value="Title (optional)" id="title"><br><br>
             <textarea cols="45" rows="5" id="note" draggable="false"></textarea><br>
-            <input type="Submit" value="Save" id="save" onclick="saveNote(, , )">
+            <input type="Submit" value="Save" id="save" onclick="displayNotes()">
         </div>
         <br><hr><br>
-        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
-        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
-        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
-        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
-        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
-        <textarea cols="45" rows="5" id="notelist" draggable="false"></textarea>
+        <div class="notes" style="text-align: center" id="notepage">
+
+        </div>
     </body>
 </html>
