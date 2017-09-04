@@ -44,6 +44,16 @@ samp {
     display: none;
 }
 
+input{
+    background-repeat:repeat-x;
+/*    border: 0px solid;*/
+    height:25px;
+    width:125px;
+}
+#submit {
+    border: 0px solid;
+}
+
 img {
     animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
     background: transparent;
