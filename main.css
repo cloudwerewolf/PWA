@@ -58,11 +58,13 @@ input{
     background-color: cornsilk;
     border-color: rgba(184, 134, 11, 0.85);
 }
-#save {
+#save{
     border: 0px solid;
     width: 80px;
 }
-
+.inputForm {
+    text-align: center;
+}
 img {
     animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
     background: transparent;
@@ -105,4 +107,11 @@ img {
 	color: rgba(247,255,167,1.00);
 	position: relative;
 	left: 0%;
+}
+#notelist{
+    display: inline-grid;
+    border-color: white;
+    border-width: 8px;
+    box-sizing: border-box;
+    outline-color: rgba(234, 227, 199, 0.65);
 }
