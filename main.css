@@ -19,6 +19,7 @@ body {
 h1 {
     color: darkgoldenrod;
     font-family: 'Scope One';
+    text-align: center;
 }
 
 h2, h3, h4, h5, h6 {
@@ -43,16 +44,16 @@ b, strong {
 samp {
     color   : white;
 }
-textarea{
+textarea {
     font-family: 'Scope One';
     background-color: cornsilk;
     border-color: rgba(184, 134, 11, 0.85);
     resize: none;
 }
-input{
+input {
     font-family: 'Scope One';
 }
-#title{
+#title {
     height:25px;
     width:125px;
     background-color: cornsilk;
@@ -62,15 +63,8 @@ input{
     border: 0px solid;
     width: 80px;
 }
-
-img {
-    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    display: block;
-    margin: 1.3em auto;
-    max-width: 95%;
+.inputForm {
+    text-align: center;
 }
 
 @keyframes colorize {
@@ -83,26 +77,12 @@ img {
         filter: grayscale(0%);
     }
 }
-#content .sidebar {
-	color: rgba(146,146,146,1.00);
-	float: left;
-	width: 20%;
-    padding-left: 2%;
-    padding-right: 2%;
-	text-align: center;
-	background-color: rgba(240, 235, 196, 0.8);
+
+textarea.notelist {
+    display: inline-grid;
+    border-color: white;
+    border-width: 8px;
+    box-sizing: border-box;
+    outline-color: rgba(234, 227, 199, 0.65);
 }
 
-#content .mainContent {
-	float: left;
-	width: 70%;
-	text-align: center;
-	padding-left: 4%;
-}
-
-#content .sidebar #menubar {
-	text-align: left;
-	color: rgba(247,255,167,1.00);
-	position: relative;
-	left: 0%;
-}

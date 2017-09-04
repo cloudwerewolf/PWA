@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>NotePen</title>
-        <meta name="description" content="NotePen">
         <link rel="stylesheet" href="main.css">
         <link href='https://fonts.googleapis.com/css?family=Scope One' rel='stylesheet'>
+        <script type="text/javascript"src="note.js"></script>
     </head>
     <body>
-        
-        <h1><center>NotePen</center></h1>
-
+        <h1>NotePen</h1>
         <h2>New Note</h2>
         
-        <div style="display: inline-block">
-            <p><samp>fill</samp></p>
+        <div class="inputForm">   
+            <textarea cols="20" rows="1" id="notehead" draggable="false"></textarea><br>
+            <textarea cols="45" rows="5" id="note" draggable="false"></textarea><br>
+            <script>
+                document.getElementById('note').addEventListener("keydown", function (event) {
+                    if (event.keyCode == 13 && event.ctrlKey) {
+                        document.getElementById('save').click();
+                        event.preventDefault();
+                    }
+                });
+            </script>
+            <input type="Submit" value="Save" id="save" onclick="saveNote(notehead.value,note.value); displayNotes()">
         </div>
-        
-        <div style="display: inline-block">
-            <center><input type=text name="Title" value="Title (optional)" id="title"></center><br>
-            <center><textarea name="Note" cols="45" rows="5" id="note" draggable="false"></textarea></center><br>
-            <input type="Submit" value="Save" id="save" onclick="saveNote(note.text, , )">
+        <br><hr><br>
+        <div class="notes" style="text-align: center" id="notepage">
+
         </div>
-        <script>
-            function saveNote(text, name, type) {
-                
-            }
-        </script>
     </body>
 </html>
