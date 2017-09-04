@@ -7,24 +7,17 @@
         <link href='https://fonts.googleapis.com/css?family=Scope One' rel='stylesheet'>
         <script type="text/javascript"src="note.js"></script>
     </head>
-    <body>
+    <body onload="noteListen();">
         <h1>NotePen</h1>
-        <h2>New Note</h2>
+        <h3>New Note</h3>
         
         <div class="inputForm">   
             <textarea cols="20" rows="1" id="notehead" draggable="false"></textarea><br>
             <textarea cols="45" rows="5" id="note" draggable="false"></textarea><br>
-            <script>
-                document.getElementById('note').addEventListener("keydown", function (event) {
-                    if (event.keyCode == 13 && event.ctrlKey) {
-                        document.getElementById('save').click();
-                        event.preventDefault();
-                    }
-                });
-            </script>
-            <input type="Submit" value="Save" id="save" onclick="saveNote(notehead.value,note.value); displayNotes()">
+            <input type="Submit" value="Save" id="save" onclick="addNote(notehead.value,note.value)">
         </div>
-        <br><hr><br>
+        <br><hr>    
+        <h3 style="text-align: center">Wall</h3>
         <div class="notes" style="text-align: center" id="notepage">
 
         </div>

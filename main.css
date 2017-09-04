@@ -33,6 +33,10 @@ h2 {
     margin-top: 1.3em;
 }
 
+h3 {
+    color: #696969;
+}
+
 a {
     color: #0083e8;
 }
@@ -42,7 +46,7 @@ b, strong {
 }
 
 samp {
-    color   : white;
+    color: white;
 }
 textarea {
     font-family: 'Scope One';
@@ -83,6 +87,6 @@ textarea.notelist {
     border-color: white;
     border-width: 8px;
     box-sizing: border-box;
-    outline-color: rgba(234, 227, 199, 0.65);
+    outline-color: rgba(224, 215, 179, 0.85);
 }
 
