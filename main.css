@@ -56,6 +56,9 @@ textarea {
 }
 input {
     font-family: 'Scope One';
+    border: 0px solid;
+    width: 90px;
+    height: 30px;
 }
 #title {
     height:25px;
@@ -63,10 +66,7 @@ input {
     background-color: cornsilk;
     border-color: rgba(184, 134, 11, 0.85);
 }
-#save {
-    border: 0px solid;
-    width: 80px;
-}
+
 .inputForm {
     text-align: center;
 }
