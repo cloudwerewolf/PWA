@@ -43,19 +43,18 @@ b, strong {
 samp {
     display: none;
 }
-
+textarea{
+    font-family: 'Scope One';
+    background-color: cornsilk;
+    border-color: darkgoldenrod;
+    resize: none;
+}
 input{
     font-family: 'Scope One';
 }
 #title{
     height:25px;
     width:125px;
-    background-color: cornsilk;
-    border-color: darkgoldenrod;
-}
-#note{
-    height:25px;
-    width:725px;
     background-color: cornsilk;
     border-color: darkgoldenrod;
 }
