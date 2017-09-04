@@ -66,15 +66,6 @@ input {
 .inputForm {
     text-align: center;
 }
-img {
-    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
-    background: transparent;
-    border: 10px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    display: block;
-    margin: 1.3em auto;
-    max-width: 95%;
-}
 
 @keyframes colorize {
     0% {
@@ -86,33 +77,12 @@ img {
         filter: grayscale(0%);
     }
 }
-#content .sidebar {
-	color: rgba(146,146,146,1.00);
-	float: left;
-	width: 20%;
-    padding-left: 2%;
-    padding-right: 2%;
-	text-align: center;
-	background-color: rgba(240, 235, 196, 0.8);
-}
 
-#content .mainContent {
-	float: left;
-	width: 70%;
-	text-align: center;
-	padding-left: 4%;
-}
-
-#content .sidebar #menubar {
-	text-align: left;
-	color: rgba(247,255,167,1.00);
-	position: relative;
-	left: 0%;
-}
-#notelist {
+textarea.notelist {
     display: inline-grid;
     border-color: white;
     border-width: 8px;
     box-sizing: border-box;
     outline-color: rgba(234, 227, 199, 0.65);
 }
+

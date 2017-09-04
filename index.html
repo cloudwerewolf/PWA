@@ -12,9 +12,17 @@
         <h2>New Note</h2>
         
         <div class="inputForm">   
-            <input type="text" value="Title (optional)" id="title"><br><br>
+            <textarea cols="20" rows="1" id="notehead" draggable="false"></textarea><br>
             <textarea cols="45" rows="5" id="note" draggable="false"></textarea><br>
-            <input type="Submit" value="Save" id="save" onclick="saveNote(title.value,note.value); displayNotes()">
+            <script>
+                document.getElementById('note').addEventListener("keydown", function (event) {
+                    if (event.keyCode == 13 && event.ctrlKey) {
+                        document.getElementById('save').click();
+                        event.preventDefault();
+                    }
+                });
+            </script>
+            <input type="Submit" value="Save" id="save" onclick="saveNote(notehead.value,note.value); displayNotes()">
         </div>
         <br><hr><br>
         <div class="notes" style="text-align: center" id="notepage">
