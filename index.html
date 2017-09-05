@@ -7,7 +7,7 @@
         <link href='https://fonts.googleapis.com/css?family=Scope One' rel='stylesheet'>
         <script type="text/javascript"src="note.js"></script>
     </head>
-    <body onload="noteListen();">
+    <body onload="noteListen(); loadOld()">
         <h1>NotePen</h1>
         <h3>New Note</h3>
         
@@ -15,6 +15,7 @@
             <textarea cols="20" rows="1" id="notehead" draggable="false"></textarea><br>
             <textarea cols="45" rows="5" id="note" draggable="false"></textarea><br>
             <input type="Submit" value="Save" id="save" onclick="addNote(notehead.value,note.value)">
+            <input type="Submit" value="Delete Notes" id="del" onclick="deleteNotes()">
         </div>
         <br><hr>    
         <h3 style="text-align: center">Wall</h3>
