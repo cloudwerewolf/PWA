@@ -33,8 +33,10 @@ textarea {
 input {
     font-family: 'Scope One';
     border: 0px solid;
-    width: 90px;
     height: 30px;
+}
+#save {
+    width: 90px;
 }
 #notehead {
     height:25px;
@@ -65,12 +67,17 @@ textarea.notelist {
     display: inline-block;
     text-align: right;
 }
-.noteholder span.notebuttons button {
-    background-color: red;
-    border: 0;
+.delBtn {
+    background-color: rgba(255, 39, 39, 0.7);
     margin: 0;
     position: relative;
     top: 30px;
     width: 30px;
-    height: 30px;
+    right: -30px;
+}
+.share {
+    background-color: rgba(105, 105, 105, 0.7);
+    top: 96px;
+    width: 30px;
+    position: relative;
 }
