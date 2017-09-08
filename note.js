@@ -2,7 +2,6 @@ var timer = [];
 var delay_timers = [];
 var notelist = [];
 function fade(element) {
-    if (timer[id]) { console.error('There shouldnt be a timer with this id'); }
     var op = 1;
     var id = element.id;
     timer[id] = setInterval(function () {
@@ -32,16 +31,15 @@ function shareNote(id) {
         navigator.share({ title: "NotePen Note", text: notes.value });
     }
 }
-function showBtn(id) {
+function showBtn(id, time) {
     var span = document.getElementById(id + "span");
     clearInterval(timer[id + "span"]);
     timer[id + "span"] = null;
     clearTimeout(delay_timers[id + "span"]);
     delay_timers[id + "span"] = null;
-    
     span.style.visibility = "visible";
     span.style.opacity = 1;
-    delay_timers[id + "span"] = setTimeout(function() {fade(span)}, 2500);
+    delay_timers[id + "span"] = setTimeout(function() {fade(span)}, time);
 }
 function displayNotes() {
     var retnotelist = localStorage.getItem('Notelist');
@@ -65,8 +63,8 @@ function displayNotes() {
         text.cols = 45;
         text.rows = 5;
         text.className = "notelist";
-        text.onclick = function() {showBtn(this.id);};
-        text.onmousemove = function() {showBtn(this.id);};
+        text.onclick = function() {showBtn(this.id, 2500);};
+        text.onmousemove = function() {showBtn(this.id, 1000);};
         text.id = notes;
         text.readOnly = "true";
         if (retnotelist[notes].title != "") {
