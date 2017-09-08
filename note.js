@@ -1,16 +1,20 @@
 var timer = [];
+var delay_timers = [];
 var notelist = [];
 function fade(element) {
+    if (timer[id]) { console.error('There shouldnt be a timer with this id'); }
     var op = 1;
     var id = element.id;
     timer[id] = setInterval(function () {
         if (op <= 0.1) {
             clearInterval(timer[id]);
+            timer[id] = null;
             element.style.visibility = "hidden";
+            return;
         }
         element.style.opacity = op;
         op -= op * 0.1;
-    }, 30);
+        }, 30);
 }
 function delNote(id) {
     var note = document.getElementById(id);
@@ -31,9 +35,13 @@ function shareNote(id) {
 function showBtn(id) {
     var span = document.getElementById(id + "span");
     clearInterval(timer[id + "span"]);
+    timer[id + "span"] = null;
+    clearTimeout(delay_timers[id + "span"]);
+    delay_timers[id + "span"] = null;
+    
     span.style.visibility = "visible";
     span.style.opacity = 1;
-    setTimeout(function() {fade(span)}, 2500);
+    delay_timers[id + "span"] = setTimeout(function() {fade(span)}, 2500);
 }
 function displayNotes() {
     var retnotelist = localStorage.getItem('Notelist');
@@ -58,6 +66,7 @@ function displayNotes() {
         text.rows = 5;
         text.className = "notelist";
         text.onclick = function() {showBtn(this.id);};
+        text.onmousemove = function() {showBtn(this.id);};
         text.id = notes;
         text.readOnly = "true";
         if (retnotelist[notes].title != "") {
@@ -72,6 +81,9 @@ function displayNotes() {
         xBtn.id = notes + "btn";
         xBtn.noteid = notes;
         xBtn.onmouseup = function() {delNote(this.noteid);};
+        if (typeof navigator.share == 'undefined') {
+            xBtn.style.right = '0px';
+        }
         notespan.appendChild(xBtn);
         if (typeof navigator.share !== 'undefined') {
             var shrBtn = document.createElement("input");
